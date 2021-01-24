@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {Row, Col, Nav, Tab, Navbar} from 'react-bootstrap';
 import PlayTab from './components/PlayTab.js'
+import Logo from './logo.png';
 
 
 function Sonnet() {
@@ -23,6 +24,9 @@ function App() {
   return (
       <Tab.Container defaultActiveKey="first" className="main-tabs-container">
         <Row>
+          <Col sm={1}>
+            <img src={Logo}></img>
+          </Col>
           <Col>
             <Nav variant="pills" expand="lg">
               <Nav.Item>
