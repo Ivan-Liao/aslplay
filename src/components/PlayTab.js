@@ -41,7 +41,7 @@ const WebcamCapture = () => {
             audio={false}
             ref={webcamRef}
             screenshotFormat="image/jpeg"
-            width={320}
+            width={520}
             height={320}
 
           />
@@ -50,7 +50,7 @@ const WebcamCapture = () => {
           {imgSrc && (
               <img
                 src={imgSrc}
-                width={320}
+                width={440}
               />
           )}
         </Col>
@@ -93,7 +93,7 @@ function PlayTab({promptText, screenshot, setScreenshot, setPromptText}) {
       </Row>
       <WebcamCapture audio={false}/>
       <Row>
-        <Button onClick={getAlphabetHandler} className="general-button">New Prompt</Button>
+        <Button onClick={getAlphabetHandler} className="general-button">New Letter</Button>
       </Row>
     </Container>
   );
