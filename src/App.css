@@ -71,6 +71,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+
 }
 .circles {
   display:flex;
@@ -109,4 +110,12 @@ body {
 .circle3 {
   height: 40rem;
   width: 40rem;
+}
+
+#modules{
+  margin-top: 300px
+}
+
+.moduleh1 {
+  margin-right: 50px;
 }

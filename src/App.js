@@ -44,13 +44,25 @@ function App() {
           <Col>
             <Tab.Content>
               <Tab.Pane eventKey="first">
-                <Sonnet />
+                <h1>A Fun Way to Learn ASL!</h1>
               </Tab.Pane>
               <Tab.Pane eventKey="second">
-                <Sonnet />
+                <h1>1) Watch the modules in the Learn tab</h1>
+                <h1>2) Play the minigame and try to make the correct letters</h1>
               </Tab.Pane>
               <Tab.Pane eventKey="third">
-                <Sonnet />
+                <Row id="modules">
+                  <h1 className="moduleh1">A-I</h1>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/q1XGIyVLuHk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </Row>
+                <Row>
+                  <h1 className="moduleh1">J-R</h1>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/mLyvdg2b9EM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </Row>
+                <Row>
+                  <h1 className="moduleh1">S-Z</h1>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/NDpHCcBEIeQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </Row>
               </Tab.Pane>
               <Tab.Pane eventKey="fourth">
                 <PlayTab promptText={ promptText } setPromptText={ setPromptText } screenshot={screenshot} setScreenshot={setScreenshot}/>

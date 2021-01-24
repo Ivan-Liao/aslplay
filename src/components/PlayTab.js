@@ -12,7 +12,7 @@ const WebcamCapture = () => {
   const [imgSrc, setImgSrc] = React.useState(null);
 
   const capture = React.useCallback(() => {
-    var imageSrc = webcamRef.current.getScreenshot({width:28, height: 28});
+    var imageSrc = webcamRef.current.getScreenshot();
     setImgSrc(imageSrc);
     // Jimp.read(imageSrc, (err, lenna) => {
     //   if (err) throw err;
@@ -43,6 +43,7 @@ const WebcamCapture = () => {
             screenshotFormat="image/jpeg"
             width={320}
             height={320}
+
           />
         </Col>
         <Col sm={6}>
