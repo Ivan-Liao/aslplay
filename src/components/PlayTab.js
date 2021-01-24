@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {Container, Row, Button, Col} from 'react-bootstrap';
 import Camera from '../camera.png';
 import Webcam from 'react-webcam';
-import Resizer from 'react-image-file-resizer';
+import Jimp from 'jimp';
 
 // const
 const alphabet = 'ABCDEFGIJKLMNOPQRSTUVWXYZ'.split('');
@@ -11,20 +11,17 @@ const WebcamCapture = () => {
   const webcamRef = React.useRef(null);
   const [imgSrc, setImgSrc] = React.useState(null);
 
-  const resizeFile = (file) => new Promise(resolve => {
-    Resizer.imageFileResizer(file, 28, 28, 'image/jpeg', 100, 0,
-    uri => {
-      resolve(uri);
-    },
-    'base64'
-    );
-  });
-
   const capture = React.useCallback(() => {
-    var imageSrc = webcamRef.current.getScreenshot();
+    var imageSrc = webcamRef.current.getScreenshot({width:28, height: 28});
     setImgSrc(imageSrc);
-    // imageSrc = resizeFile(imageSrc);
+    // Jimp.read(imageSrc, (err, lenna) => {
+    //   if (err) throw err;
+    //   lenna
+    //     .resize(28, 28) // resize
+    //     .write(imageSrc);
+    // });
     // setImgSrc(imageSrc);
+    console.log(JSON.stringify(imageSrc));
   }, [webcamRef, setImgSrc]);
   
   // const requestOptions = {
@@ -45,13 +42,14 @@ const WebcamCapture = () => {
             ref={webcamRef}
             screenshotFormat="image/jpeg"
             width={320}
-            height={240}
+            height={320}
           />
         </Col>
         <Col sm={6}>
           {imgSrc && (
               <img
                 src={imgSrc}
+                width={320}
               />
           )}
         </Col>
