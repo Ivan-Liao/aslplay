@@ -1,5 +1,5 @@
 * {
-  margin: 10;
+  margin: 5;
   padding: 10;
   box-sizing: border-box;
   z-index: 2;
@@ -64,9 +64,10 @@ body {
 }
 
 .tab-content {
-  font-size: 32px;
+  font-size: 48px;
   text-align: center;
   min-height: 80vh;
+  max-height: 82vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

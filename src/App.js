@@ -4,7 +4,6 @@ import {Row, Col, Nav, Tab, Navbar} from 'react-bootstrap';
 import PlayTab from './components/PlayTab.js'
 
 
-
 function Sonnet() {
 	return (
 		<p>
@@ -16,6 +15,8 @@ function Sonnet() {
 function App() {
   // states
   const [promptText, setPromptText] = useState("");
+  const [screenshot, setScreenshot] = useState();
+
 
   // once on load
 
@@ -52,7 +53,7 @@ function App() {
                 <Sonnet />
               </Tab.Pane>
               <Tab.Pane eventKey="fourth">
-                <PlayTab promptText={ promptText } setPromptText={ setPromptText }/>
+                <PlayTab promptText={ promptText } setPromptText={ setPromptText } screenshot={screenshot} setScreenshot={setScreenshot}/>
                 <div className="circles">
                   <div className="circle1"></div>
                   <div className="circle2"></div>
