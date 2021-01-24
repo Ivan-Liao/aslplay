@@ -25,9 +25,6 @@ function PlayTab({promptText, setPromptText}) {
           <img src={Camera} width="300"/></Button>
       </Row>
       <Row>
-        <input accept="image/*" id="icon-button-file" type="file" capture="user"/>
-      </Row>
-      <Row>
         <Button onClick={getAlphabetHandler} className="general-button">New Prompt</Button>
       </Row>
     </Container>
